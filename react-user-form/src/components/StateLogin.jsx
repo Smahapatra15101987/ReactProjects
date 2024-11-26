@@ -22,23 +22,6 @@ export default function Login() {
     return hasMinLength(value.trim(), 6);
   });
 
-  // const [enteredValues, setEnteredValues] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-
-  // const [didEdit, setDidEdit] = useState({
-  //   email: false,
-  //   password: false,
-  // });
-
-  // const emailIsInvalid =
-  //   didEdit.email &&
-  //   !isEmail(enteredValues.email) &&
-  //   !isNotEmpty(enteredValues.email);
-  // const passwordIsInvalid =
-  //   didEdit.password && !hasMinLength(enteredValues.password.trim(), 6);
-
   function handleSubmit(event) {
     event.preventDefault();
     if(emailHasError || passwordHasError) {
@@ -46,24 +29,6 @@ export default function Login() {
     }
     console.log(emailValue, passwordValue);
   }
-
-  // function handleInputChange(identifier, value) {
-  //   setEnteredValues((prevValues) => ({
-  //     ...prevValues,
-  //     [identifier]: value,
-  //   }));
-  //   setDidEdit((prevValues) => ({
-  //     ...prevValues,
-  //     [identifier]: false,
-  //   }));
-  // }
-
-  // function handleInputBlur(identifier) {
-  //   setDidEdit((prevEdit) => ({
-  //     ...prevEdit,
-  //     [identifier]: true,
-  //   }));
-  // }
 
   return (
     <form onSubmit={handleSubmit}>
